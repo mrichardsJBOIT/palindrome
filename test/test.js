@@ -32,8 +32,13 @@ describe("Phrase", function() {
       let punctuatedPalindrome =  new Phrase("Madam, I'm Adam.");
       assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
 
-    })
+    });
 
-  })
+    it("should return empty string for non alphabetical phrase", function() {
+      let nonAlpha = new Phrase("1234@#");
+      assert.strictEqual(nonAlpha.letters(), "");
+    });
+
+  });
 
 });

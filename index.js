@@ -38,13 +38,7 @@ function Phrase(content) {
 
   // returns letters of the contents
   this.letters = function letters() {
-    let theLetters = [];
-    for( i=0; i < this.content.length; i++) {
-      if (this.content.charAt(i).match(/[a-zA-Z]/)) {
-        theLetters.push(this.content.charAt(i));
-      }
-    }
-    return theLetters.join("");
+    return (this.content.match(/[a-z]/gi) || []).join("");
   }
 
   this.louder = function louder() {
