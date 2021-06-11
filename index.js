@@ -1,8 +1,11 @@
-//Add revers to all strigs
+module.exports = Phrase;
+
+//Add reverse to all strings
 String.prototype.reverse = function reverse() {
   return Array.from(this).reverse().join("");
 }
 
+//Add a blank check to each string
 String.prototype.blank = function blank() {
   if ( this.length === 0 || this.match(/^\s+$/gm)) {
     return true;
@@ -10,14 +13,14 @@ String.prototype.blank = function blank() {
   return false;
 }
 
-function emailParts(email) {
-  return email.split("@")
-}
-
+//Add a last to arrays
 Array.prototype.last = function last() {
   return this.slice(-1);
 }
 
+function emailParts(email) {
+  return email.split("@")
+}
 
 //define a Phrase Object
 function Phrase(content) {
