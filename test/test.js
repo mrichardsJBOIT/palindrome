@@ -10,6 +10,11 @@ describe("Phrase", function() {
       assert(!nonPalindrome.palindrome());
     });
 
+    it("should return false for an empty string", function() {
+      let emptyPhrase = new Phrase("");
+      assert(!emptyPhrase.palindrome());
+    });
+
     it("should return true for a plain palindrome", function() {
       let nonPalindrome = new Phrase("racecar");
       assert(nonPalindrome.palindrome());
